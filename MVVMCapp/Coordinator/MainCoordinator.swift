@@ -9,14 +9,17 @@ final class MainCoordinator: MainCoordinatorProtocol {
     }
 
     func goToLogin() {
+        print("goToLogin")
         navigationController?.pushViewController(loginViewController, animated: true)
     }
 
     func goToDetails() {
+        print("goToDetails")
         navigationController?.pushViewController(detailsViewController, animated: true)
     }
 
     func showAlert(title: String, message: String, buttonText: String) {
+        print("showAlert")
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: buttonText, style: .default, handler: { (action) -> Void in
             alert.dismiss(animated: true, completion: nil)
