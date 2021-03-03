@@ -1,0 +1,88 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+require 'xcodeproj'
+
+default_platform(:ios)
+
+def print_start
+    project_path = '../MVVMCapp.xcodeproj'
+    project = Xcodeproj::Project.open(project_path)
+    target_name = project.targets.first.name
+    slack(
+        message: "Started testing build, branch: " + git_branch + ", target: " + target_name + ", version: " + get_version_number,
+        success: true,        # Optional, defaults to true.
+        payload: {  # Optional, lets you specify any number of your own Slack attachments.
+          "Build Date" => Time.new.to_s,
+          "Built by" => "Fastlane",
+        },
+        slack_url: "https://hooks.slack.com/services/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",
+        default_payloads: [:git_branch, :git_author], # Optional, lets you specify default payloads to include. Pass an empty array to suppress all the default payloads.
+        attachment_properties: { # Optional, lets you specify any other properties available for attachments in the slack API (see https://api.slack.com/docs/attachments).
+            # This hash is deep merged with the existing properties set using the other properties above. This allows your own fields properties to be appended to the existing fields that were created using the `payload` property for instance.
+          thumb_url: "http://example.com/path/to/thumb.png",
+          fields: [{
+              title: "Branch",
+              value: git_branch,
+              short: true
+          }, {
+              title: "Target",
+              value: target_name,
+              short: false
+          }, {
+              title: "Version",
+              value: get_version_number,
+              short: true
+          }]
+        }
+    )
+end
+
+def print_finish
+    project_path = '../MVVMCapp.xcodeproj'
+    project = Xcodeproj::Project.open(project_path)
+    target_name = project.targets.first.name
+    slack(
+        message: "Built branch: " + git_branch + ", target: " + target_name + ", version: " + get_version_number,
+        success: true,        # Optional, defaults to true.
+        payload: {  # Optional, lets you specify any number of your own Slack attachments.
+          "Build Date" => Time.new.to_s,
+        },
+        slack_url: "https://hooks.slack.com/services/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",
+    )
+end
+
+def build_and_test_lane
+   scan()
+end
+
+def on_error(exception)
+    slack(
+        message: "Lane failed with exception : #{exception}",
+        success: false,
+        slack_url: "https://hooks.slack.com/services/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",
+    )
+end
+
+platform :ios do
+    lane :build_and_test do
+       begin
+          print_start()
+          build_and_test_lane()
+       rescue => exception
+           on_error(exception)
+       end
+       print_finish()
+    end
+end
