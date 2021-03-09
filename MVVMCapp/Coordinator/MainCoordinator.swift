@@ -47,6 +47,6 @@ private extension MainCoordinator {
     }
 
     var detailsViewModel: DetailsViewModelProtocol {
-        DetailsViewModel(coordinator: self, apiManager: APIManager())
+        DetailsViewModel(coordinator: self, apiManager: APIManager(), sorter: Sorter(), merger: Merger())
     }
 }

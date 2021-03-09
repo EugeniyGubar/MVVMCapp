@@ -16,10 +16,17 @@
 		178906D125699F30006DBC8E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178906D025699F30006DBC8E /* SceneDelegate.swift */; };
 		178906D825699F32006DBC8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 178906D725699F32006DBC8E /* Assets.xcassets */; };
 		178906DB25699F32006DBC8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 178906D925699F32006DBC8E /* LaunchScreen.storyboard */; };
-		178906F125699F33006DBC8E /* MVVMCappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178906F025699F33006DBC8E /* MVVMCappUITests.swift */; };
 		17890704256A87F0006DBC8E /* CoordinatorProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17890703256A87F0006DBC8E /* CoordinatorProtocols.swift */; };
 		1789070C256AAD13006DBC8E /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1789070B256AAD13006DBC8E /* MainCoordinator.swift */; };
 		17890711256AB063006DBC8E /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17890710256AB063006DBC8E /* APIManager.swift */; };
+		17AF9CD325F80EE4007BA021 /* LoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AF9CD225F80EE4007BA021 /* LoginUITests.swift */; };
+		17AF9CD825F82EE8007BA021 /* Sorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AF9CD725F82EE8007BA021 /* Sorter.swift */; };
+		17AF9CDE25F82F15007BA021 /* SorterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AF9CDD25F82F15007BA021 /* SorterProtocol.swift */; };
+		17AF9CE525F83146007BA021 /* Merger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AF9CE425F83146007BA021 /* Merger.swift */; };
+		17AF9CEB25F83155007BA021 /* MergerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AF9CEA25F83155007BA021 /* MergerProtocol.swift */; };
+		17AF9CF725F8339D007BA021 /* SorterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AF9CF625F8339D007BA021 /* SorterMock.swift */; };
+		17AF9CFB25F833AB007BA021 /* MergerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AF9CFA25F833AB007BA021 /* MergerMock.swift */; };
+		17AF9CFF25F8378A007BA021 /* DetailsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AF9CFE25F8378A007BA021 /* DetailsUITests.swift */; };
 		17E9818A256AF5D8002A0FFF /* ValidatorProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E98189256AF5D8002A0FFF /* ValidatorProtocols.swift */; };
 		17E9818F256AF613002A0FFF /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E9818E256AF613002A0FFF /* Validator.swift */; };
 		17E98194256B0165002A0FFF /* DetailsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E98193256B0165002A0FFF /* DetailsProtocols.swift */; };
@@ -76,11 +83,18 @@
 		178906E125699F33006DBC8E /* MVVMCappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMCappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		178906E725699F33006DBC8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		178906EC25699F33006DBC8E /* MVVMCappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMCappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		178906F025699F33006DBC8E /* MVVMCappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMCappUITests.swift; sourceTree = "<group>"; };
 		178906F225699F33006DBC8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17890703256A87F0006DBC8E /* CoordinatorProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocols.swift; sourceTree = "<group>"; };
 		1789070B256AAD13006DBC8E /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		17890710256AB063006DBC8E /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		17AF9CD225F80EE4007BA021 /* LoginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUITests.swift; sourceTree = "<group>"; };
+		17AF9CD725F82EE8007BA021 /* Sorter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sorter.swift; sourceTree = "<group>"; };
+		17AF9CDD25F82F15007BA021 /* SorterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SorterProtocol.swift; sourceTree = "<group>"; };
+		17AF9CE425F83146007BA021 /* Merger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Merger.swift; sourceTree = "<group>"; };
+		17AF9CEA25F83155007BA021 /* MergerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergerProtocol.swift; sourceTree = "<group>"; };
+		17AF9CF625F8339D007BA021 /* SorterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SorterMock.swift; sourceTree = "<group>"; };
+		17AF9CFA25F833AB007BA021 /* MergerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergerMock.swift; sourceTree = "<group>"; };
+		17AF9CFE25F8378A007BA021 /* DetailsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsUITests.swift; sourceTree = "<group>"; };
 		17E98189256AF5D8002A0FFF /* ValidatorProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorProtocols.swift; sourceTree = "<group>"; };
 		17E9818E256AF613002A0FFF /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		17E98193256B0165002A0FFF /* DetailsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsProtocols.swift; sourceTree = "<group>"; };
@@ -123,6 +137,8 @@
 				17365B64257436960010F620 /* ValidatorMock.swift */,
 				17365B6C257438760010F620 /* APIManagerMock.swift */,
 				17365B7925743F500010F620 /* CoordinatorMock.swift */,
+				17AF9CF625F8339D007BA021 /* SorterMock.swift */,
+				17AF9CFA25F833AB007BA021 /* MergerMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -150,6 +166,8 @@
 		178906CD25699F30006DBC8E /* MVVMCapp */ = {
 			isa = PBXGroup;
 			children = (
+				17AF9CE325F83136007BA021 /* Merger */,
+				17AF9CD625F82ECF007BA021 /* Sorter */,
 				17E98188256AF5C6002A0FFF /* Validator */,
 				17F45D5B256AB617007540D1 /* Coordinator */,
 				17F45D5F256AB639007540D1 /* APIManager */,
@@ -178,8 +196,9 @@
 		178906EF25699F33006DBC8E /* MVVMCappUITests */ = {
 			isa = PBXGroup;
 			children = (
-				178906F025699F33006DBC8E /* MVVMCappUITests.swift */,
 				178906F225699F33006DBC8E /* Info.plist */,
+				17AF9CD225F80EE4007BA021 /* LoginUITests.swift */,
+				17AF9CFE25F8378A007BA021 /* DetailsUITests.swift */,
 			);
 			path = MVVMCappUITests;
 			sourceTree = "<group>";
@@ -202,6 +221,24 @@
 				17E9819D256B0195002A0FFF /* DetailsViewModel.swift */,
 			);
 			path = Details;
+			sourceTree = "<group>";
+		};
+		17AF9CD625F82ECF007BA021 /* Sorter */ = {
+			isa = PBXGroup;
+			children = (
+				17AF9CDD25F82F15007BA021 /* SorterProtocol.swift */,
+				17AF9CD725F82EE8007BA021 /* Sorter.swift */,
+			);
+			path = Sorter;
+			sourceTree = "<group>";
+		};
+		17AF9CE325F83136007BA021 /* Merger */ = {
+			isa = PBXGroup;
+			children = (
+				17AF9CEA25F83155007BA021 /* MergerProtocol.swift */,
+				17AF9CE425F83146007BA021 /* Merger.swift */,
+			);
+			path = Merger;
 			sourceTree = "<group>";
 		};
 		17E98188256AF5C6002A0FFF /* Validator */ = {
@@ -309,6 +346,7 @@
 					};
 					178906EB25699F33006DBC8E = {
 						CreatedOnToolsVersion = 12.1;
+						LastSwiftMigration = 1230;
 						TestTargetID = 178906CA25699F30006DBC8E;
 					};
 				};
@@ -364,7 +402,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		176A510225F52B3200F9BA27 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputFileListPaths = (
@@ -375,7 +413,7 @@
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
@@ -386,15 +424,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17AF9CDE25F82F15007BA021 /* SorterProtocol.swift in Sources */,
 				17F45D76256AB8FE007540D1 /* LoginProtocols.swift in Sources */,
 				17F45D6C256AB894007540D1 /* LoginViewController.swift in Sources */,
 				17E9818A256AF5D8002A0FFF /* ValidatorProtocols.swift in Sources */,
 				17F45D61256AB650007540D1 /* APIManagerProtocols.swift in Sources */,
 				17E98194256B0165002A0FFF /* DetailsProtocols.swift in Sources */,
 				17890711256AB063006DBC8E /* APIManager.swift in Sources */,
+				17AF9CD825F82EE8007BA021 /* Sorter.swift in Sources */,
 				17E9818F256AF613002A0FFF /* Validator.swift in Sources */,
+				17AF9CEB25F83155007BA021 /* MergerProtocol.swift in Sources */,
 				178906CF25699F30006DBC8E /* AppDelegate.swift in Sources */,
 				17F45D71256AB8E2007540D1 /* LoginViewModel.swift in Sources */,
+				17AF9CE525F83146007BA021 /* Merger.swift in Sources */,
 				178906D125699F30006DBC8E /* SceneDelegate.swift in Sources */,
 				1789070C256AAD13006DBC8E /* MainCoordinator.swift in Sources */,
 				17E9819E256B0195002A0FFF /* DetailsViewModel.swift in Sources */,
@@ -411,6 +453,8 @@
 				17365B65257436960010F620 /* ValidatorMock.swift in Sources */,
 				17365B7A25743F500010F620 /* CoordinatorMock.swift in Sources */,
 				17365B7F2574441B0010F620 /* DetailsTests.swift in Sources */,
+				17AF9CFB25F833AB007BA021 /* MergerMock.swift in Sources */,
+				17AF9CF725F8339D007BA021 /* SorterMock.swift in Sources */,
 				17365B7225743CF70010F620 /* LoginTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,7 +463,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				178906F125699F33006DBC8E /* MVVMCappUITests.swift in Sources */,
+				17AF9CFF25F8378A007BA021 /* DetailsUITests.swift in Sources */,
+				17AF9CD325F80EE4007BA021 /* LoginUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -652,6 +697,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 53APD5F9YQ;
 				INFOPLIST_FILE = MVVMCappUITests/Info.plist;
@@ -662,6 +708,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yauhenihubar.MVVMCappUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = MVVMCapp;
@@ -672,6 +719,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 53APD5F9YQ;
 				INFOPLIST_FILE = MVVMCappUITests/Info.plist;

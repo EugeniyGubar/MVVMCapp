@@ -7,10 +7,19 @@ final public class DetailsViewModel: DetailsViewModelProtocol {
 
     private var coordinator: MainCoordinatorProtocol?
     private let apiManager: APIManagerProtocol
+    private let sorter: SorterProtocol
+    private let merger: MergerProtocol
 
-    init(coordinator: MainCoordinatorProtocol?, apiManager: APIManagerProtocol) {
+    init(
+        coordinator: MainCoordinatorProtocol?,
+        apiManager: APIManagerProtocol,
+        sorter: SorterProtocol,
+        merger: MergerProtocol
+    ) {
         self.coordinator = coordinator
         self.apiManager = apiManager
+        self.sorter = sorter
+        self.merger = merger
     }
 
     public func fetchData(onSuccess: @escaping ((String) -> Void), onError: @escaping (() -> Void)) {
@@ -27,5 +36,10 @@ final public class DetailsViewModel: DetailsViewModelProtocol {
                 )
             }
         )
+    }
+
+    public func sortAndMerge(_ strings: [String], order: SortingOrder, connector: String) -> String {
+        let sortedStrings = sorter.sort(strings, order: order)
+        return merger.merge(sortedStrings, connector: connector)
     }
 }
