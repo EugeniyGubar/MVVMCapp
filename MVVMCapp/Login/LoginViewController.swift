@@ -88,9 +88,22 @@ final class LoginViewController: UIViewController, LoginViewControllerProtocol {
         button.addTarget(self, action: #selector(login), for: .touchUpInside)
     }
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupAccessibilityIdentifiers()
+    }
+
     @objc
     func login() {
+        userNameTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
         viewModel.validateCredentials(credentials: credentials)
+    }
+
+    private func setupAccessibilityIdentifiers() {
+        userNameTextField.accessibilityIdentifier = "userNameTextField"
+        passwordTextField.accessibilityIdentifier = "passwordTextField"
+        button.accessibilityIdentifier = "button"
     }
 }
 
